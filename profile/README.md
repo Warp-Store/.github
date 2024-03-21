@@ -1,12 +1,10 @@
-## Hi there 👋
+# Olá! Bem-vindo(a) a Warp Store.
+A plataforma que vai te ajudar a impulsionar suas vendas.
+Ofereçemos recursos de entregas instantânea para impulsionar mais ainda o seu negócio.
 
-<!--
+<img align="left" height="220" src="https://i.imgur.com/M0WaCVp.png"/>
 
-**Here are some ideas to get you started:**
-
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+#### `1.` Crie sua conta em (warpstore.app)(https://warpstore.app)
+#### `2.` Crie sua loja.
+#### `3.` Configure o nosso plugin em seu servidor.
+#### `4.` Prontos para vender, agora é com você. Basta divulgar o link de sua loja para seus clientes.
