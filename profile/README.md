@@ -1,10 +1,131 @@
-# Olá! Bem-vindo(a) a Warp Store.
-A plataforma que vai te ajudar a impulsionar suas vendas.
-Ofereçemos recursos de entregas instantânea para impulsionar mais ainda o seu negócio.
+<div align="center">
 
-<img align="left" height="220" src="https://warpstore.app/assets/images/ilustrations/sales.svg"/>
+# 🚀 Warp Store
 
-#### `1.` Crie sua conta em [warpstore.app](https://warpstore.app)
-#### `2.` Crie sua loja.
-#### `3.` Configure o nosso plugin em seu servidor.
-#### `4.` Prontos para vender, agora é com você. Basta divulgar o link de sua loja para seus clientes.
+**Crie sua loja e monetize seu servidor de forma automática.**
+
+Plataforma de lojas virtuais com **entrega instantânea** de produtos para servidores de jogos.
+Configure sua loja, conecte ao seu servidor e comece a vender — sem entrega manual.
+
+[🌐 Site](https://warpstore.app) · [📚 Documentação](https://wiki.warpstore.app/introduction) · [❓ F.A.Q](https://wiki.warpstore.app/faq)
+
+</div>
+
+---
+
+## O que é a Warp Store?
+
+A Warp Store é uma solução de ponta a ponta para **donos de servidores de FiveM e MTA:SA** que
+querem monetizar seus projetos. Você cria a loja, cadastra os produtos e conecta ao seu servidor —
+a partir daí, cada compra é **entregue automaticamente ao jogador assim que o pagamento é aprovado**.
+
+> Usada por mais de 250 servidores. 💜
+
+### ✨ Principais recursos
+
+- ⚡ **Entrega automática** — o produto chega ao jogador logo após a confirmação do pagamento.
+- 🛠️ **Solução completa** — criação da loja, cadastro de produtos e conexão com o servidor.
+- 🎨 **Personalização** — ajuste a aparência e o funcionamento da sua loja.
+- 📊 **Painel de ganhos** — gráficos de vendas em tempo real e gestão dos meios de pagamento.
+- 💳 **Múltiplos pagamentos** — Mercado Pago & Pix e PayPal.
+- 🔒 **Segurança e desempenho** — stack moderna com foco em performance e proteção.
+- 🔌 **Integrações** — redes sociais, chat online e API para layouts customizados.
+
+---
+
+## 📦 Conteúdo deste repositório
+
+Este repositório reúne os componentes de integração da Warp Store:
+
+| Pasta | Descrição | Stack |
+|---|---|---|
+| [`warp-delivery-game-mta/`](warp-delivery-game-mta) | Plugin de integração para **MTA:SA** (`warpstore_integration` v3.0) que recebe a fila de comandos da plataforma e entrega os produtos no servidor. | Lua (MTA:SA) |
+| [`warpstore-support-bot/`](warpstore-support-bot) | Bot de vendas/suporte para **Discord**, escalável e com recuperação de operação em caso de falha durante a compra. | TypeScript, Discord.js, RabbitMQ, MongoDB |
+
+---
+
+## 🎮 Plugin MTA:SA (`warp-delivery-game-mta`)
+
+Resource que conecta seu servidor MTA:SA à plataforma e executa as entregas.
+
+**Requisitos:** MTA:SA `1.5.9` ou superior (cliente e servidor).
+
+### Instalação
+
+1. Copie a pasta `warp-delivery-game-mta` para o diretório `resources/` do seu servidor.
+2. Configure o [`config.lua`](warp-delivery-game-mta/config.lua):
+   - `['token']` — token da sua loja (em **warpstore.app**).
+   - `['data:id']` — element data usada para identificar o ID do jogador.
+   - `['color:hex']` — cor padrão das mensagens.
+   - Ajuste os formatos de notificação de entrega: **balões**, **chatbox** e **infobox**.
+3. Personalize os comandos de entrega em [`commands.lua`](warp-delivery-game-mta/commands.lua)
+   conforme os produtos da sua loja.
+4. Inicie o resource:
+   ```
+   start warpstore_integration
+   ```
+
+> 💡 As notificações de entrega e os comandos de produto são totalmente editáveis.
+
+---
+
+## 🤖 Bot de vendas/suporte (`warpstore-support-bot`)
+
+Aplicação Discord totalmente escalável para vendas de produtos, construída orientada a eventos e
+integrada a um marketplace de pagamentos. Em caso de falha durante uma compra, o sistema é capaz de
+**recuperar a operação** ao reiniciar, sem perder o pedido.
+
+**Requisitos:** Node.js `18.0.0`+ (RabbitMQ e MongoDB para execução completa).
+
+### Instalação e execução
+
+```bash
+cd warpstore-support-bot
+npm install
+```
+
+```bash
+# Desenvolvimento
+npm run dev
+
+# Produção
+npm run run:prod
+```
+
+Ou via Docker:
+
+```bash
+docker compose up -d
+```
+
+---
+
+## 💳 Meios de pagamento
+
+- [Mercado Pago & Pix](https://wiki.warpstore.app/gateways/mercado-pago)
+- [PayPal](https://wiki.warpstore.app/gateways/paypal)
+
+## 🔗 Links úteis
+
+- **Site:** https://warpstore.app
+- **Documentação:** https://wiki.warpstore.app/introduction
+- **F.A.Q:** https://wiki.warpstore.app/faq
+- **Termos & Condições:** https://wiki.warpstore.app/terms
+- **API para desenvolvedores:** https://wiki.warpstore.app/developers/layout/introduction
+
+---
+
+## 🏁 Começando em 4 passos
+
+1. **Crie sua conta** em [warpstore.app](https://warpstore.app).
+2. **Crie sua loja** e cadastre seus produtos.
+3. **Configure o plugin** no seu servidor (veja a seção do MTA:SA acima).
+4. **Divulgue o link** da sua loja para seus clientes e comece a vender. 🎉
+
+---
+
+<div align="center">
+
+**[warpstore.app](https://warpstore.app)** — transformando o mundo com a melhor automatização do mercado.
+
+</div>
