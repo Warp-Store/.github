@@ -69,37 +69,6 @@ Resource que conecta seu servidor MTA:SA à plataforma e executa as entregas.
 
 ---
 
-## 🤖 Bot de vendas/suporte (`warpstore-support-bot`)
-
-Aplicação Discord totalmente escalável para vendas de produtos, construída orientada a eventos e
-integrada a um marketplace de pagamentos. Em caso de falha durante uma compra, o sistema é capaz de
-**recuperar a operação** ao reiniciar, sem perder o pedido.
-
-**Requisitos:** Node.js `18.0.0`+ (RabbitMQ e MongoDB para execução completa).
-
-### Instalação e execução
-
-```bash
-cd warpstore-support-bot
-npm install
-```
-
-```bash
-# Desenvolvimento
-npm run dev
-
-# Produção
-npm run run:prod
-```
-
-Ou via Docker:
-
-```bash
-docker compose up -d
-```
-
----
-
 ## 💳 Meios de pagamento
 
 - [Mercado Pago & Pix](https://wiki.warpstore.app/gateways/mercado-pago)
@@ -112,6 +81,8 @@ docker compose up -d
 - **F.A.Q:** https://wiki.warpstore.app/faq
 - **Termos & Condições:** https://wiki.warpstore.app/terms
 - **API para desenvolvedores:** https://wiki.warpstore.app/developers/layout/introduction
+- **Demo:** https://demo.wrpstore.app
+- **Demo Esmerald:** https://esmerald.wrpstore.app
 
 ---
 
