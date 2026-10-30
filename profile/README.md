@@ -40,7 +40,6 @@ Este repositório reúne os componentes de integração da Warp Store:
 | Pasta | Descrição | Stack |
 |---|---|---|
 | [`warp-delivery-game-mta/`](warp-delivery-game-mta) | Plugin de integração para **MTA:SA** (`warpstore_integration` v3.0) que recebe a fila de comandos da plataforma e entrega os produtos no servidor. | Lua (MTA:SA) |
-| [`warpstore-support-bot/`](warpstore-support-bot) | Bot de vendas/suporte para **Discord**, escalável e com recuperação de operação em caso de falha durante a compra. | TypeScript, Discord.js, RabbitMQ, MongoDB |
 
 ---
 
